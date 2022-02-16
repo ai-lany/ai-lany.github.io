@@ -1,0 +1,11 @@
+.nav{
+    position:absolute;
+}
+
+.navbar-toggler{
+    border: none!important;
+}
+.navbar-toggler:focus{
+    outline:none;
+    box-shadow: none !important;
+}
