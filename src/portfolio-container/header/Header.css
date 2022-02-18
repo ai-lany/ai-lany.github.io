@@ -1,5 +1,15 @@
+.Header{
+    display: block;
+    width: 100vw;
+}
+.navbar
+{
+    background-color: transparent !important;
+}
 .nav{
-    position:absolute;
+    display: block !important;
+    background: none;
+    width: 100vw !important;
 }
 
 .navbar-toggler{
@@ -9,3 +19,40 @@
     outline:none;
     box-shadow: none !important;
 }
+
+.center {
+    margin: auto!important;
+}
+.navbar .navbar-nav .nav-link:hover {
+    color: #fff;
+  }
+  @media only screen and (min-width: 960px) {
+    .navbar .navbar-nav .nav-link {
+      padding: 1em 0.7em;
+    }
+    .navbar {
+      padding: 0;
+    }
+    .navbar .navbar-brand {
+      padding: 0 0.7em;
+    }
+  }
+  .navbar .navbar-nav .nav-link {
+    position: relative;
+  }
+  .navbar .navbar-nav .nav-link::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    color: transparent;
+    width: 0%;
+    content: '';
+    height: 3px;
+    transition: all 0.5s;
+  }
+  .navbar .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
