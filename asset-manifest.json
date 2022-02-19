@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/ailanyEXE/ailanyEXE.github.io/static/css/main.bf0c6b10.css",
-    "main.js": "/ailanyEXE/ailanyEXE.github.io/static/js/main.2adf7cd0.js",
+    "main.css": "/ailanyEXE/ailanyEXE.github.io/static/css/main.96af9f68.css",
+    "main.js": "/ailanyEXE/ailanyEXE.github.io/static/js/main.c3bd8ee5.js",
     "static/js/787.1ed0c42c.chunk.js": "/ailanyEXE/ailanyEXE.github.io/static/js/787.1ed0c42c.chunk.js",
     "index.html": "/ailanyEXE/ailanyEXE.github.io/index.html",
-    "main.bf0c6b10.css.map": "/ailanyEXE/ailanyEXE.github.io/static/css/main.bf0c6b10.css.map",
-    "main.2adf7cd0.js.map": "/ailanyEXE/ailanyEXE.github.io/static/js/main.2adf7cd0.js.map",
+    "main.96af9f68.css.map": "/ailanyEXE/ailanyEXE.github.io/static/css/main.96af9f68.css.map",
+    "main.c3bd8ee5.js.map": "/ailanyEXE/ailanyEXE.github.io/static/js/main.c3bd8ee5.js.map",
     "787.1ed0c42c.chunk.js.map": "/ailanyEXE/ailanyEXE.github.io/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf0c6b10.css",
-    "static/js/main.2adf7cd0.js"
+    "static/css/main.96af9f68.css",
+    "static/js/main.c3bd8ee5.js"
   ]
 }
