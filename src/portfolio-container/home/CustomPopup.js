@@ -21,7 +21,7 @@ const CustomPopup = (props) => {
       }}
       className={'overlay'} 
     >
-      <div className={'popup center'}>
+      <div className={'popup center'} style={{zindex: 100}}>
         <h2>{props.title}</h2>
         <span className={'close'} onClick={closeHandler}>
           &times;

@@ -2,7 +2,6 @@ import { render } from '@testing-library/react';
 import React, { Component } from 'react';
 import App from '../../App';
 import './Header.css';
-import Contact from '../contact/Contact';
 import { useState } from "react";
 
 export default function Header(){
@@ -19,14 +18,11 @@ export default function Header(){
             <li className="nav-item active">
                 <a className="nav-link" href="#"><span>01. </span>Home</a>
               </li>
-            <li className="nav-item active">
-                <a className="nav-link" href="#about"><span>02. </span>About</a>
-              </li>
               <li className="nav-item active">
-                <a className="nav-link" href="#projects"><span>03. </span>Projects</a>
+                <a className="nav-link" href="#projects"><span>02. </span>Projects</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link"  href="#"><span>04. </span>Contact</a>
+                <a className="nav-link"  href="#"><span>03. </span>Contact</a>
               </li>
             </ul>
           </div>

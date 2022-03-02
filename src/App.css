@@ -12,11 +12,41 @@
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+
+br, input::placeholder, .close{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+
 ::selection {
   color: rgb(212, 61, 61);
   background: pink;
 }
 
-.btn{
+.btn, .btn:focus, .btn:active{
   border-radius: 1px;
+}
+
+
+.links{
+  display: inline;
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  padding:1em;
+}
+
+.line{
+  background: white;
+  opacity: .5;
+  width: 2px;
+  height: 50vh;
+  position: fixed;
+  left: 1.5em;
+  bottom: 3em;
 }
