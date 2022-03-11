@@ -41,17 +41,17 @@
     position: relative;
   }
   .navbar .navbar-nav .nav-link::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: #fff;
-    color: transparent;
-    width: 0%;
-    content: '';
-    height: 3px;
-    transition: all 0.5s;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #fff;
+        color: transparent;
+        width: 0%;
+        content: '';
+        height: 3px;
+        transition: all 0.5s;
   }
   .navbar .navbar-nav .nav-link:hover::after {
     width: 100%;
