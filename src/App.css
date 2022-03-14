@@ -1,8 +1,15 @@
 *{
-  font-family: loos-normal, sans-serif;
+  font-family: inter, sans-serif;
+  font-style: normal;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scrollbar-color: pink;
 }
+h1{
+  font-weight: 600!important;
+}
+
+
 .noselect {
   -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -49,4 +56,10 @@ br, input::placeholder, .close{
   position: fixed;
   left: 1.5em;
   bottom: 3em;
+}
+
+.lightbulb{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
 }

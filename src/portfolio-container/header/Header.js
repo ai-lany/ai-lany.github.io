@@ -9,14 +9,14 @@ export default function Header(){
       <div>
       <div className='nav noselect'>
         <nav className='fixed-top navbar-expand-md navbar  navbar-dark bg-transparent'>
-          <button className='navbar-toggler' type='button' data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <button className='navbar-toggler' type='button' data-toggle="collapse" data-target="#navbar-ailany" aria-controls="navbar-ailany" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="">
+          <div className="collapse navbar-collapse" id="navbar-ailany">
             <a className="navbar-brand" href="#"></a>
             <ul className="navbar-nav center ">
             <li className="nav-item active">
-                <a className="nav-link" href="#"><span>01. </span>Home</a>
+                <a className="nav-link" aria-current="true"  href="#"><span>01. </span>Home</a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#projects"><span>02. </span>Projects</a>

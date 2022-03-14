@@ -23,18 +23,19 @@
 
 .cols h1 {
   font-size: clamp(32px, 8vw, 80px);
-  font-weight: 600;
   padding-bottom: 10px;
 }
 .cols p {
   color: pink;
 }
 
-.cols h5 {
+.cols h4 {
   width: 80%;
-  color: rgb(120, 122, 121);
-  font-weight: 50;
-  font-size: clamp(12px, 1.5vw, 32px)
+  color: rgb(223, 213, 215);
+}
+
+.contact-btn{
+  width: 10em;
 }
 
 .cols .btn {
@@ -42,22 +43,18 @@
   color: pink;
   position: absolute;
   height: 3em!important;
-  width: 7em;
   right: 1em;
-  border-radius: 8px;
 }
 .cols .btn:hover {
   color: rgb(212, 61, 61);
   position: absolute;
+  
 }
-.bi,
-.bi-arrow-right {
-  color: rgb(212, 61, 61);
-}
+
 .cols .btn::after {
   position: absolute;
   bottom:8px;
-  right: 1em;
+  right: 2em;
   margin: auto;
   background-color: #fff;
   color: transparent;
@@ -65,14 +62,20 @@
   content: "";
   height: 32px;
   transition: all 0.5s;
+  border-radius: 4px;
 }
 .cols .btn:hover::after {
   mix-blend-mode: multiply;
-  width: 100%;
+  width: 6.8em;
   position: absolute;
-  bottom:8px;
+  right: 2em;
+  border-radius: 4px;
+  padding: 1em;
 }
-
+.contact-btn svg{
+  position: relative;
+  bottom: 2px;
+}
 .contact-popup{
   z-index: 1000;
 }
@@ -175,104 +178,18 @@ input {
   float: right;
 }
 
-.wrapper {
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  overflow: hidden;
+.text-gradient {
+	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+	background-size: 300%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgba(255, 227, 227, 0.3);
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
 }
 
-.wrapper div {
-  position: fixed;
-  filter: blur(50px);
-  opacity: 0.05;
-}
-
-
-.animated .one{
-  box-shadow: 0 0 45vmax 45vmax magenta;
-  animation: 
-    hue 10s 0s linear infinite,
-    move1 19s 0s linear infinite;
-}
-
-.animated .two{
-  box-shadow: 0 0 45vmax 45vmax  white;
-  animation: 
-    hue 15s 0s linear infinite,
-    move2 25s 0s linear infinite;
-}
-
-.animated .three {
-  box-shadow: 0 0 45vmax 45vmax  cyan;
-  animation: 
-    hue 20s 0s linear infinite,
-    move3 15s 0s linear infinite;
-  opacity: .05;
-}
-
-@keyframes hue {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(0deg); }
-}
-
-@keyframes move1 {
-  0% {
-    top: 0vh;
-    left: 50vw;
-  }
-  25% {
-    left: 0vw;
-  }
-  50% {
-    top: 100vh;
-  }
-  75% {
-    left: 100vw;
-  }
-  100% {
-    top: 0vh;
-    left: 50vw;
-  }
-}
-
-@keyframes move2 {
-  0% {
-    top: 50vh;
-    left: 100vw;
-  }
-  25% {
- top:  100vh;
-  }
-  50% {
-    left: 0vw;
-  }
-  75% {
-    top: 0vh;
-  }
-  100% {
-    top: 50vh;
-    left: 100vw;
-  }
-}
-
-@keyframes move3 {
-  0% {
-    top: 100vh;
-    left: 50vw;
-  }
-  25% {
- left: 100vw;
-  }
-  50% {
-    top: 0vh;
-  }
-  75% {
-    left: 0vw;
-  }
-  100% {
-    top: 100vh;
-    left: 50vw;
-  }
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
 }

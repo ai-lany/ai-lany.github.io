@@ -22,31 +22,20 @@ export default function Profile() {
              
             <div className='profile-parent'>
 
-                <div className='animated'>
-                
-                <div class="wrapper">
-                
-                    <div class="one"></div>
-                    <div class="two"></div>
-                    <div class="three"></div>
-
-                </div>
+                    
                     <div className='cols' ref={boxRef} >
                         <p className='noselect'>Hi, my name is</p>
-                        <h1 className='link'>Ailany Rodriguez.</h1>
-                        <h5 className='noselect'>I'm a 4th year Computer Science and Psychology student at Florida International University with a passion for developing beautiful and intuitive software.</h5>
-                        <button onClick={(e) => setVisibility(!visibility)} className='contact-btn btn shadow-none'>Contact <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <h1 className='link text-gradient'>Ailany Rodriguez.</h1>
+                        <h4 className='noselect'>Creative Full-stack Developer.</h4>
+                        <button onClick={(e) => setVisibility(!visibility)} className='contact-btn btn shadow-none'>Contact <svg className = "arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="pink" class="bi bi-arrow-right" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
 </svg></button>
 
-                    </div>
-                    
-
-                            </div>
-                            
+            
+                         </div>  
                         </div>
                         <CustomPopup
-                        className = "contact-popup"
+                        className = "contact-popup center"
                         onClose={popupCloseHandler}
                         show={visibility}
                         title="Let's get in touch!">
