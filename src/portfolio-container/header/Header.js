@@ -5,10 +5,20 @@ import './Header.css';
 import { useState } from "react";
 
 export default function Header(){
+  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
     return(
       <div>
-      <div className='nav noselect'>
-        <nav className='fixed-top navbar-expand-md navbar  navbar-dark bg-transparent'>
+      <div id='nav' className='noselect'>
+        <nav id = 'navbar' className='fixed-top navbar-expand-md navbar  navbar-dark bg-transparent'>
           <button className='navbar-toggler' type='button' data-toggle="collapse" data-target="#navbar-ailany" aria-controls="navbar-ailany" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

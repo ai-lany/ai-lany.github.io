@@ -26,7 +26,7 @@
   padding-bottom: 10px;
 }
 .cols p {
-  color: pink;
+  color: rgb(243, 236, 236);
 }
 
 .cols h4 {
@@ -35,47 +35,25 @@
 }
 
 .contact-btn{
-  width: 10em;
+ 
 }
 
 .cols .btn {
-  padding: 0 1em 0 0 !important;
-  color: pink;
-  position: absolute;
-  height: 3em!important;
-  right: 1em;
+  
 }
 .cols .btn:hover {
-  color: rgb(212, 61, 61);
-  position: absolute;
-  
+
 }
 
 .cols .btn::after {
-  position: absolute;
-  bottom:8px;
-  right: 2em;
-  margin: auto;
-  background-color: #fff;
-  color: transparent;
-  width: 0%;
-  content: "";
-  height: 32px;
-  transition: all 0.5s;
-  border-radius: 4px;
+  
 }
 .cols .btn:hover::after {
-  mix-blend-mode: multiply;
-  width: 6.8em;
-  position: absolute;
-  right: 2em;
-  border-radius: 4px;
-  padding: 1em;
+  
 }
-.contact-btn svg{
-  position: relative;
-  bottom: 2px;
-}
+
+
+
 .contact-popup{
   z-index: 1000;
 }
@@ -116,7 +94,8 @@
   position: absolute;
   top: 0px;
   right: 24px;
-  transition: all 100ms;
+  transition-timing-function: ease-in;
+  transition: 100ms;
   font-size: 40px;
   font-weight: bold;
   text-decoration: none;
@@ -193,3 +172,23 @@ input {
 	50% { background-position: 100% 50%; }
 	100% { background-position: 0px 50%; }
 }
+
+.marquee {
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+.box {
+  display: block;
+}
+.logo {
+  fill: #fff;
+}
+
+.bounce-box{
+  width: 40vw;
+  height: 20em;
+  background: grey;
+}
+
