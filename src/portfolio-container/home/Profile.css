@@ -39,7 +39,7 @@
 }
 
 .contact-btn{
- margin: 2em 0 !important;
+ margin: 2em 0 0 !important;
 }
 
 .cols .btn {
@@ -77,14 +77,12 @@
 .popup {
   padding: 20px;
   background: #fff !important;
-  border-radius: 5px;
-  width: 30%;
-  height: 22em;
-  position: fixed;
+  border-radius: 8px;
+  width: clamp(40%, 50vw, 10em);
+  position: relative;
   top: 25vh;
-  bottom: 25vh;
-  left: 36vw;
-  transition: all 5s ease-in-out;
+  height: fit-content;
+  transition: opacity 5s ease-in-out;
   overflow: hidden;
 }
 
@@ -146,6 +144,11 @@ select:focus {
   outline: none;
 }
 
+form{
+  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
+}
+
 input {
   padding: 3px 10px;
   border: 2px;
@@ -159,6 +162,8 @@ input {
 
 #contactSubmit {
   float: right;
+  position: relative;
+  top: .5em;
 }
 
 .text-gradient {

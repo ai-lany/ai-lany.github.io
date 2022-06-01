@@ -36,7 +36,7 @@ export default function Profile() {
             <div className='profile-parent'>
 
                     
-                    <div className='cols' ref={boxRef} >
+                    <div className='cols ' ref={boxRef} >
                         <p className=''>Hi, my name is</p>
                         <h1 className='link noselect text-gradient'>Ailany.</h1>
                         <h3 className=''>Creative Full-stack Developer.</h3>
@@ -51,21 +51,21 @@ export default function Profile() {
 
                         
                         <CustomPopup
-                        className = "contact-popup center"
+                        className = "contact-popup d-flex"
                         onClose={popupCloseHandler}
                         show={visibility}
                         title="Let's get in touch!">
                         <hr/>
                         
-                        <form id='contact'>
-                            <input name="name" placeholder='Name' type = "text"/> <br/> <br/>
-                            <input name="email" placeholder="email@gmail.com" type = "text"/> <br/><br/>
-                           
-                        </form>
-                        <textarea name='msg' form='contact' placeholder='Leave me a message...'></textarea>
-                        <button id='contactSubmit' className='btn' name='submit' type='submit' form='contact' formAction=''>Submit <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="black" class="bi bi-send" id="scroll-icon" viewBox="0 0 16 16">
+                        <form id='contact' className='' action="https://public.herotofu.com/v1/fc3e46f0-e1db-11ec-826d-57a28a4a2cb5" method="post">
+                            <input name="name" placeholder='Name' type = "text" required/> <br/> <br/>
+                            <input name="email" placeholder="email@gmail.com" type = "text" required/> <br/><br/>
+                            <textarea name='msg' form='contact' placeholder='Leave me a message...'></textarea>
+                        <button id='contactSubmit' className='btn' name='submit' type='submit' form='contact' >Submit <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="black" class="bi bi-send" id="scroll-icon" viewBox="0 0 16 16">
                     <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
                     </svg> </button>
+                        </form>
+                        
                     </CustomPopup>
                   
                     
