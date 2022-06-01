@@ -11,6 +11,11 @@ h1{
   font-weight: 600!important;
 }
 
+.btn:focus{
+  outline: none !important;
+  box-shadow: none!important;
+}
+
 .rotate{
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -77,3 +82,4 @@ br, input::placeholder, .close{
 .clickable{
   cursor: pointer;
 }
+
