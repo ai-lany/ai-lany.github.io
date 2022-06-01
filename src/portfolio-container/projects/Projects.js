@@ -11,7 +11,7 @@ export function Project(props) {
     }, [])
 
   return (
-    <div className="project">
+    <div className="project mx-auto">
       <div style={{ padding: "1em", width: "100%" }}>
         <div className="d-inline-flex w-50">
           <a className="" href={props.git} target="_blank" >
@@ -58,12 +58,13 @@ export function Project(props) {
 }
 export default function Projects() {
   return (
+    <div>
     <div
       className="projects-container  d-flex justify-content-center"
       id="projects"
     >
       <Row>
-      <Col md={6}>
+      <Col  md={6}>
           <Project 
             name="Automated Essay Grader" 
             date="Ongoing"
@@ -85,6 +86,12 @@ export default function Projects() {
         </Col>
     
       </Row>
+      
+  
+    </div>
+    <div style={{height: "25vh", width: "100vw", background: 'none'}}>
+
+    </div>
     </div>
   );
 }

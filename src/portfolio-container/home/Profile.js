@@ -14,7 +14,7 @@ export default function Profile() {
 
 
     useEffect(() => {
-        gsap.to(boxRef.current, { x: 50, duration: 1 });
+        gsap.to(boxRef.current, { x: 20, duration: 1.2 });
         
         const onScroll = () => setScrolled('d-none');
         // clean up code

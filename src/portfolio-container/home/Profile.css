@@ -7,7 +7,7 @@
 .profile-container {
   z-index: 1;
   height: 100vh !important;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -20,7 +20,7 @@
   position:absolute;
   top: 35vh;
   color: aliceblue;
-  width: 50%;
+  width: max(60vw);
   height: 53vh;
   z-index: 0;
 }
@@ -34,12 +34,13 @@
 }
 
 .cols h4 {
-  width: 80%;
+  width: 100vw;
   color: rgb(223, 213, 215);
 }
 
 .contact-btn{
  margin: 2em 0 0 !important;
+ word-wrap: normal!important;
 }
 
 .cols .btn {
@@ -168,18 +169,17 @@ input {
 
 .text-gradient {
 	background: linear-gradient(-45deg, #fd688b, #f9ab51, #fd688b);
-	background-size: 200%;
+	background-size: 40em;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: rgba(255, 255, 255, 0);
-	animation: animated_text 8s ease-in-out infinite;
-	-moz-animation: animated_text 8s ease-in-out infinite;
-	-webkit-animation: animated_text 8s ease-in-out infinite;
+	animation: animated_text 6s ease-in-out infinite;
+	-moz-animation: animated_text 6s ease-in-out infinite;
+	-webkit-animation: animated_text 6s ease-in-out infinite;
 }
 
 @keyframes animated_text {
 	0% { background-position: 0px 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0px 50%; }
+	100% { background-position: 100% 50%; }
 }
 
 .marquee {
