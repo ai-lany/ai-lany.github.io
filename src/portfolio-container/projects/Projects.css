@@ -1,6 +1,44 @@
 
 .projects-container{
-    height: 100vh;
     width: 100vw;
-    background-color: black;
+    height: 70vh;
+}
+
+.project{
+    position: relative;
+    height:300px;
+    width:320px;
+    border: 1px solid rgba(255, 255, 255, 0.092);
+    background-color: rgba(26, 25, 26, 0.724);
+    border-radius: 4px;
+    margin: 2em 2em !important;
+}
+
+.project svg{
+    fill:#ffd8d8;
+}
+
+.project-title{
+    color: #ffffff;
+    font-size: 1.35em;
+}
+
+.project p{
+    padding: .5em 0 ;
+    color: rgba(255, 255, 255, 0.875);
+    font-size: .9em;
+}
+
+.tech-list{
+    position: absolute;
+    bottom: 1em;
+    width: 200px;
+}
+.tech-list div{
+    padding-right: 1em;
+    display: inline-flex;
+}
+.tech-list div:hover{
+    color:#ffabbc;
+    cursor: pointer;
 }

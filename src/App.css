@@ -4,7 +4,9 @@
   overflow-x: hidden;
   scroll-behavior: smooth;
   scrollbar-color: pink;
+  cursor:auto;
 }
+
 h1{
   font-weight: 600!important;
 }
@@ -69,4 +71,9 @@ br, input::placeholder, .close{
   position: fixed;
   bottom: 1em;
   right: 1em;
+}
+
+
+.clickable{
+  cursor: pointer;
 }

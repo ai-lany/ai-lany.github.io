@@ -8,13 +8,17 @@
   z-index: 1;
   height: 100vh !important;
   width: 100vw;
-  background-color: black !important;
+  position: relative;
+}
+
+.profile-parent{
+  justify-content: center;
+  display: flex;
 }
 
 .cols {
   position:absolute;
-  top: 28vh;
-  left: 12vw;
+  top: 35vh;
   color: aliceblue;
   width: 50%;
   height: 53vh;
@@ -22,7 +26,7 @@
 }
 
 .cols h1 {
-  font-size: clamp(32px, 8vw, 80px);
+  font-size: clamp(42px, 12vw, 80px);
   padding-bottom: 10px;
 }
 .cols p {
@@ -35,7 +39,7 @@
 }
 
 .contact-btn{
- 
+ margin: 2em 0 !important;
 }
 
 .cols .btn {
@@ -158,13 +162,13 @@ input {
 }
 
 .text-gradient {
-	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
-	background-size: 300%;
+	background: linear-gradient(-45deg, #fd688b, #f9ab51, #fd688b);
+	background-size: 200%;
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: rgba(255, 227, 227, 0.3);
-	animation: animated_text 10s ease-in-out infinite;
-	-moz-animation: animated_text 10s ease-in-out infinite;
-	-webkit-animation: animated_text 10s ease-in-out infinite;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+	animation: animated_text 8s ease-in-out infinite;
+	-moz-animation: animated_text 8s ease-in-out infinite;
+	-webkit-animation: animated_text 8s ease-in-out infinite;
 }
 
 @keyframes animated_text {
@@ -192,3 +196,19 @@ input {
   background: grey;
 }
 
+
+.bi-arrow-down-short{
+  fill: white;
+  position: absolute;
+  bottom: 2em;
+  animation: bounce 2s infinite;
+
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {transform: translateY(-20px)}
+  60% {transform: translateY(-10px)}
+}

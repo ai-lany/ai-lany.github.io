@@ -12,7 +12,6 @@
 #navbar{
   transition: top 0.4s;
   top: 0;
-  
 }
 
 .navbar-toggler{
@@ -23,12 +22,15 @@
     box-shadow: none !important;
 }
 
+.nav-link, .nav-link span{
+  cursor: pointer;
+}
 .center {
     margin: auto!important;
 }
 .navbar .navbar-nav .nav-link:hover {
     color: #fff;
-  }
+}
   @media only screen and (min-width: 960px) {
     .navbar .navbar-nav .nav-link {
       padding: 1em 0.7em;
