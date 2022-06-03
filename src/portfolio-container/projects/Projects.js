@@ -1,19 +1,42 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 export function Project(props) {
 
     const[tech, setTech] = useState([]);
+    const[gitmsg, setGitMsg] = useState('');
+    const[linkmsg, setLinkMsg] = useState('');
 
     useEffect(() => {
         setTech(props.tech)
+        if(props.git === ''){
+          setGitMsg('Private Repository')
+        }else{
+          setGitMsg('View Files')
+        }
+        if(props.link === ''){
+          setLinkMsg('Coming Soon')
+        }else{
+          setLinkMsg('View Deployment')
+        }
+        
     }, [])
 
   return (
     <div className="project mx-auto">
       <div style={{ padding: "1em", width: "100%" }}>
+      
         <div className="d-inline-flex w-50">
+        <OverlayTrigger
+          placement="top"
+          delay={{ show: 0, hide: 200 }}
+          overlay={(
+            <Tooltip >
+              {gitmsg}
+            </Tooltip>
+          )}
+        >
           <a className="" href={props.git} target="_blank" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -25,9 +48,20 @@ export function Project(props) {
               <path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z" />
             </svg>
           </a>
+          </OverlayTrigger>
         </div>
-
-        <div className="d-inline-flex w-50 justify-content-end">
+    
+        
+     <div className="d-inline-flex w-50 justify-content-end">
+     <OverlayTrigger
+          placement="top"
+          delay={{ show: 0, hide: 200 }}
+          overlay={(
+            <Tooltip >
+              {linkmsg}
+            </Tooltip>
+          )}
+        >
           <a href={props.link} target="_blank" >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -40,7 +74,10 @@ export function Project(props) {
               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
             </svg>
           </a>
+          </OverlayTrigger>
         </div>
+
+       
     
       </div>
       <div style={{ padding: "0 1em", width: "100%" }}>
