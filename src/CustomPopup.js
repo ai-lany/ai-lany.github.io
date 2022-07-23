@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import  "./Profile.css";
+import  "./portfolio-container/home/Profile.css";
 import PropTypes from "prop-types";
 const CustomPopup = (props) => {
   const [show, setShow] = useState(false);

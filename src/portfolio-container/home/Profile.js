@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import './Profile.css';
 import { useState } from "react";
-import CustomPopup from "./CustomPopup";
+import CustomPopup from "../../CustomPopup";
 
 export default function Profile() {
 

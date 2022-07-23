@@ -1,4 +1,6 @@
-
+:root{
+    --shadow-color: 0deg 0% 0%;
+}
 .projects-container{
     width: 100vw;
     height: fit-content;
@@ -41,4 +43,34 @@
 .tech-list div:hover{
     color:#ffabbc;
     cursor: pointer;
+}
+
+.ReactModal__Overlay--after-open{
+    background-color: rgba(0, 0, 0, 0.75)!important;
+}
+.ReactModal__Content--after-open{
+    background-color: rgb(14, 14, 14)!important;
+    color: white!important;
+    border: solid 1px rgb(173, 38, 85) !important;
+    border-radius: 8px !important;
+    max-height: 85vh;
+    overflow: scroll;
+    box-shadow: 0.1px 0.3px 0.4px hsl(var(--shadow-color) / 0.1),
+    0.3px 1.6px 1.8px -0.4px hsl(var(--shadow-color) / 0.1),
+    0.6px 3px 3.4px -0.7px hsl(var(--shadow-color) / 0.1),
+    1px 4.9px 5.6px -1.1px hsl(var(--shadow-color) / 0.1),
+    1.6px 7.9px 9.1px -1.4px hsl(var(--shadow-color) / 0.1),
+    2.5px 12.3px 14.1px -1.8px hsl(var(--shadow-color) / 0.1),
+    3.7px 18.8px 21.6px -2.1px hsl(var(--shadow-color) / 0.1),
+    5.5px 27.6px 31.7px -2.5px hsl(var(--shadow-color) / 0.1);
+}
+.ReactModal__Content--after-open h2, .ReactModal__Content--after-open button{
+    color: white !important;
+    overflow: visible;
+}
+.ReactModal__Content--after-open p{
+    color: rgb(189, 189, 189) !important;
+}
+.screenshot{
+    width: 100%;
 }

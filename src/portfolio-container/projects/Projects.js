@@ -1,12 +1,41 @@
 import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+import Modal from 'react-modal';
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    width: '70vw',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+};
 export function Project(props) {
 
     const[tech, setTech] = useState([]);
     const[gitmsg, setGitMsg] = useState('');
     const[linkmsg, setLinkMsg] = useState('');
+    Modal.setAppElement('#root');
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+    function openModal() {
+      setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+      // references are now sync'd and can be accessed.
+      
+    }
+
+    function closeModal() {
+      setIsOpen(false);
+    }
+
 
     useEffect(() => {
         setTech(props.tech)
@@ -52,7 +81,7 @@ export function Project(props) {
         </div>
     
         
-     <div className="d-inline-flex w-50 justify-content-end">
+     <div className="d-inline-flex w-50 justify-content-end" >
      <OverlayTrigger
           placement="top"
           delay={{ show: 0, hide: 200 }}
@@ -62,7 +91,7 @@ export function Project(props) {
             </Tooltip>
           )}
         >
-          <a href={props.link} target="_blank" >
+          <button className="btn" onClick={openModal}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="22"
@@ -73,7 +102,7 @@ export function Project(props) {
               <path fill-rule="evenodd"d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
               <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
             </svg>
-          </a>
+          </button>
           </OverlayTrigger>
         </div>
 
@@ -90,6 +119,23 @@ export function Project(props) {
           </div>
 
         </div>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <h2 >{props.name}</h2>
+        <button onClick={closeModal} className='btn' style={{position:'absolute', right: '1em'}}>X</button>
+        <br></br>
+        <br></br>
+        <div>
+          {props.screenshots.map((src)=> {return(<img className="screenshot" src = {src}></img>)})}
+        </div>
+       
+      </Modal>
     </div>
   );
 }
@@ -109,6 +155,7 @@ export default function Projects() {
             link=""
             desc="Natural language processing to accomplish the grading of legal essays. A custom text-classifciation model identifies topics and compares semantic similarity to a correct answer."
             tech={['Python','spaCy', 'MongoDB', 'React', 'tok2vec']}
+            screenshots = {['https://i.imgur.com/6LwRjuz.png', 'https://i.imgur.com/lSpUZ5F.png']}
             ></Project>
         </Col>
         <Col md={6}>
@@ -119,6 +166,7 @@ export default function Projects() {
             link="https://orbit-wallet.herokuapp.com/"
             desc="A cryptocurrency dashboard that uses authentication to build a custom portfolio."
             tech={['MongoDB', 'Express', 'React', 'Node.JS', 'JWT Auth']}
+            screenshots = {['https://i.imgur.com/6LwRjuz.png', 'https://i.imgur.com/lSpUZ5F.png']}
           ></Project>
         </Col>
     
@@ -129,6 +177,7 @@ export default function Projects() {
     <div style={{height: "25vh", width: "100vw", background: 'none'}}>
 
     </div>
+    
     </div>
   );
 }
