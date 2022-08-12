@@ -1,67 +1,87 @@
-.Header{
-    display: block;
-    width: 100vw;
+.Header {
+  display: block;
+  width: 100vw;
 }
 
-#nav{
-    display: block !important;
-    background: none;
-    width: 100vw !important;
+#nav {
+  display: block !important;
+  background: #131214 !important;
+  width: 100vw !important;
 }
 
-#navbar{
+#navbar {
   transition: top 0.4s;
   top: 0;
+  background: #131214 !important;
 }
 
-.navbar-toggler{
-    border: none!important;
-}
-.navbar-toggler:focus{
-    outline:none;
-    box-shadow: none !important;
+.navbar-toggler {
+  border: none !important;
 }
 
-.nav-link, .nav-link span{
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.nav-link,
+.nav-link span {
   cursor: pointer;
 }
+
 .center {
-    margin: auto!important;
+  margin: auto !important;
 }
+
 .navbar .navbar-nav .nav-link:hover {
-    color: #fff;
+  color: #fff;
 }
-  @media only screen and (min-width: 960px) {
-    .navbar .navbar-nav .nav-link {
-      padding: 1em 0.7em;
-    }
-    .navbar {
-      padding: 0;
-    }
-    .navbar .navbar-brand {
-      padding: 0 0.7em;
-    }
-  }
+
+@media only screen and (min-width: 577px) {
   .navbar .navbar-nav .nav-link {
-    position: relative;
-  }
-  .navbar .navbar-nav .nav-link::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        background-color: #fff;
-        color: transparent;
-        width: 0%;
-        content: '';
-        height: 3px;
-        transition: all 0.5s;
-  }
-  .navbar .navbar-nav .nav-link:hover::after {
-    width: 100%;
+    padding: 1em 0.7em;
   }
 
-  .nav-item span{
-    color: rgb(255, 255, 255);
+  .navbar {
+    padding: 0;
   }
+
+  .navbar .navbar-brand {
+    padding: 0 0.7em;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .navbar-nav{
+    width: max-content;
+    float: left;
+    margin:1em !important;
+  }
+  
+}
+
+
+.navbar .navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-link::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fff;
+  color: transparent;
+  width: 0%;
+  content: '';
+  height: 3px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-item span {
+  color: rgb(255, 255, 255);
+}

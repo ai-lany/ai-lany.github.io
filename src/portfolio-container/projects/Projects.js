@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Projects.css";
 import { Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
 import Modal from 'react-modal';
+import '../../App.css'
 
 const customStyles = {
   content: {
@@ -127,8 +128,11 @@ export function Project(props) {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 >{props.name}</h2>
-        <button onClick={closeModal} className='btn' style={{position:'absolute', right: '1em'}}>X</button>
+        <div className="d-block" style={{height: '5em', width: '100%', zIndex: 10000}}>
+        <h2  >{props.name} </h2>
+        <button onClick={closeModal} className='btn' style={{position:'absolute', right: '1em', top: '1.5em'}}>X</button>
+        </div>
+        
         <br></br>
         <br></br>
         <div>
@@ -155,7 +159,7 @@ export default function Projects() {
             link=""
             desc="Natural language processing to accomplish the grading of legal essays. A custom text-classifciation model identifies topics and compares semantic similarity to a correct answer."
             tech={['Python','spaCy', 'MongoDB', 'React', 'tok2vec']}
-            screenshots = {['https://i.imgur.com/6LwRjuz.png', 'https://i.imgur.com/lSpUZ5F.png']}
+            screenshots = {['']}
             ></Project>
         </Col>
         <Col md={6}>

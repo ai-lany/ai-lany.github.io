@@ -1,6 +1,7 @@
 :root{
     --shadow-color: 0deg 0% 0%;
 }
+
 .projects-container{
     width: 100vw;
     height: fit-content;
@@ -49,7 +50,7 @@
     background-color: rgba(0, 0, 0, 0.75)!important;
 }
 .ReactModal__Content--after-open{
-    background-color: rgb(14, 14, 14)!important;
+    background-color: rgb(14, 14, 15)!important;
     color: white!important;
     border: solid 1px rgb(173, 38, 85) !important;
     border-radius: 8px !important;
