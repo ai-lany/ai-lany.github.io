@@ -1,0 +1,70 @@
+*{
+  margin:0;
+}
+
+::selection {
+  color: rgb(212, 61, 61);
+  background: pink;
+}
+
+body{
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif !important;
+  font-size: 16px;
+  font-style: normal;
+  overflow-x: hidden;
+  scroll-behavior: smooth!important;
+  scrollbar-color: pink;
+  cursor:auto;
+  color-scheme: light dark;
+  background-color:#131214!important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: #131214 !important;
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+a{
+  text-decoration: none!important;
+}
+
+h1{
+  font-size: 5em;
+}
+
+
+.text-gradient {
+	background: linear-gradient(-45deg, #fd688b, #f9ab51, #fd688b);
+	background-size: 40em;
+  background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: rgba(255, 255, 255, 0);
+	animation: animated_text 6s ease-in-out infinite;
+	-moz-animation: animated_text 6s ease-in-out infinite;
+	-webkit-animation: animated_text 6s ease-in-out infinite;
+}
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+.Landing{
+  height: 80vh;
+  width: 70vw!important;
+  display: flex!important;
+  justify-content: center;
+  align-items: center;
+}
+.LandingContent{
+  position: relative;
+  bottom: 4em;
+}
+
+.Button{
+  color: #fd688b !important;
+  border: solid 1px #fd688b !important;
+}
+

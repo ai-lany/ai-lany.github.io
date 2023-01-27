@@ -1,0 +1,48 @@
+
+.NavBar{
+    display: flex!important;
+    justify-content: center!important;
+}
+
+.NavItem{
+    list-style-type: none; /* Remove bullets */
+    display: flex;
+    justify-content: center;
+    width: 8em;
+}
+
+.NavLink{
+    color:rgb(226, 226, 226) !important;
+    padding: 1em 0.75em !important;
+    height: 2em;
+    font-size: 18px;
+    width:100%;
+    text-align: center;
+}
+
+.NavLink:hover{
+    color:#fff !important;
+}
+
+.NavLink::after{
+    background-color:#fff !important;
+    position: relative !important;
+    bottom: -0.5em !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 0%!important;
+    content: ''!important;
+    height: 3px!important;
+    display: block!important;
+    margin:auto;
+    transition: all 0.5s;
+}
+
+  
+  .NavLink:hover::after {
+    width: 100%!important;
+  }
+  
+  .NavItem span {
+    color: rgb(255, 255, 255)!important;
+  }
