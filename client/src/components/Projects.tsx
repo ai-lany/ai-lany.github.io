@@ -21,7 +21,7 @@ const PROJECTS:Project[] = [
         date:"string",
         screenshots: ["string"],
         tech: ["string"],
-        status: "string",
+        status: "Complete",
     },
     {
         name:"Automated Essay Grader",
@@ -31,7 +31,7 @@ const PROJECTS:Project[] = [
         date:"string",
         screenshots: ["string"],
         tech: ["string"],
-        status: "string",
+        status: "Complete",
     },
     {
         name:"Cryptocurrency Dashboard",
@@ -41,7 +41,7 @@ const PROJECTS:Project[] = [
         date:"string",
         screenshots: ["string"],
         tech: ["string"],
-        status: "string",
+        status: "In Progress",
     },
     {
         name:"SCIAL. Social Media Analytics Platform",
@@ -51,29 +51,28 @@ const PROJECTS:Project[] = [
         date:"string",
         screenshots: ["string"],
         tech: ["string"],
-        status: "string",
+        status: "In Progress",
     },
 ];
 
 const PROJECT_STYLES = {
-    background:"#161616", 
+    maxWidth:"100%",
+    background:"#fff", 
     height:"400px", 
-    margin: "2em 0",
-    borderRadius: "4px",
+    borderRadius: "36px",
     padding: "1em",
-    border: "solid 1px #242424"
 }
 
 const Project: React.FC<{props:Project}> = ({props}) => {
     return(
-        <Container style={PROJECT_STYLES}>
+        <Container className="Project" style={PROJECT_STYLES}>
             {props.name}
         </Container>
     );
 };
 const Projects: React.FC<{}> = ({}) => {
     return(
-        <Container id="Projects">
+        <Container id="Projects" style={{maxWidth:"70vw", display:"flex", flexDirection:"column", justifyContent:"center"}}>
             {PROJECTS.map((project)=>{
                 return(
                     <Project props={project}/>

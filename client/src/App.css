@@ -1,5 +1,13 @@
 *{
-  margin:0;
+  margin: 0 !important;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Aurora-Grotesk";
+  src: local("Aurora-Grotesk"),
+    url("./assets/fonts/AuroraGrotesk-Medium.otf") format("opentype") tech(color-COLRv1), url("./assets/fonts/AuroraGrotesk-Medium.otf")
+      format("opentype");
 }
 
 ::selection {
@@ -8,7 +16,7 @@
 }
 
 body{
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif !important;
+  font-family: Aurora-Grotesk, Inter, Avenir, Helvetica, Arial, sans-serif !important;
   font-size: 16px;
   font-style: normal;
   overflow-x: hidden;
@@ -16,13 +24,12 @@ body{
   scrollbar-color: pink;
   cursor:auto;
   color-scheme: light dark;
-  background-color:#131214!important;
+  background-color:#000000!important;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  background-color: #131214 !important;
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
@@ -31,12 +38,26 @@ a{
 }
 
 h1{
-  font-size: 5em;
+  color:#f8c3d9;
+  display: inline;
+  font-family: Aurora-Grotesk;
+  font-size: 8em;
+}
+
+.noselect,br,hr {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 
+
 .text-gradient {
-	background: linear-gradient(-45deg, #fd688b, #f9ab51, #fd688b);
+	background: linear-gradient(-45deg, #fd68a6, #d88dec, #fd688b);
 	background-size: 40em;
   background-clip: text;
 	-webkit-background-clip: text;
@@ -44,7 +65,14 @@ h1{
 	animation: animated_text 6s ease-in-out infinite;
 	-moz-animation: animated_text 6s ease-in-out infinite;
 	-webkit-animation: animated_text 6s ease-in-out infinite;
+  overflow-x: visible !important;
 }
+
+span{
+  overflow-x: visible !important;
+}
+
+
 
 @keyframes animated_text {
 	0% { background-position: 0px 50%; }
@@ -52,8 +80,8 @@ h1{
 }
 
 .Landing{
-  height: 80vh;
-  width: 70vw!important;
+  height: 90vh;
+  width: 100vw!important;
   display: flex!important;
   justify-content: center;
   align-items: center;
@@ -64,7 +92,32 @@ h1{
 }
 
 .Button{
-  color: #fd688b !important;
-  border: solid 1px #fd688b !important;
+  color: #fff !important;
+  border: solid 1px #fff !important;
 }
 
+
+.highlight{
+  color:#f8c3d9;
+  border: solid 1px #f8c3d9;
+  display: inline;
+  border-radius: 25px;
+  padding: 4px 8px;
+}
+
+.Artwork{
+  z-index: -1;
+}
+
+.Project{
+  margin: 1em!important; 
+  padding: 1em !important;
+}
+
+#Projects{
+
+}
+
+svg path{
+  fill:white;
+}
